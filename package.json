@@ -1,0 +1,11 @@
+{
+  "name": "mern-stack-project",
+  "version": "1.0.0",
+  "description": "MERN-stack-app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "dimusiq",
+  "license": "ISC"
+}
