@@ -5,6 +5,7 @@ const {errorHandler} = require('./middleware/error.middleware')
 const connectDB = require('./config/db')
 const PORT = process.env.PORT || 8000
 
+
 //Connect to database
 connectDB()
 
@@ -17,8 +18,10 @@ app.get('/', (req, res) => {
     res.status(200).json({ message: 'Welcome to the Support DESK API' })
 })
 
-//added routes from userRoutes.js 
+//Routes 
 app.use('/api/users', require('./routes/user.routes'))
+app.use('/api/tickets', require('./routes/ticket.routes'))
+
 
 app.use(errorHandler)
 

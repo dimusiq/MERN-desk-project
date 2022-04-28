@@ -48,17 +48,7 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 })
 
-//@desc Get current user
-//@route /api/me
-//@access Private
-const getMe = asyncHandler(async (req, res) => {
-    const user = {
-        id: req.user._id,
-        email: req.user.email,
-        name: req.user.name,
-    }
-    res.status(200).json(user)
-})
+
 
 //@desc Login a user
 //@route /api/users/login
@@ -82,9 +72,22 @@ const loginUser = asyncHandler(async (req, res) => {
     }
 })
 
+//@desc Get current user
+//@route /api/users/me
+//@access Private
+const getMe = asyncHandler(async (req, res) => {
+    const user = {
+        id: req.user._id,
+        email: req.user.email,
+        name: req.user.name,
+    }
+    res.status(200).json(user)
+})
+
+
 
 module.exports = {
     registerUser,
     loginUser,
-    getMe
+    getMe,
 }
