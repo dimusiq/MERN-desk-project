@@ -1,5 +1,11 @@
 {
     "cSpell.words": [
         "toastify"
-    ]
+    ],
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "scssFormatter.singleQuote": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": false
 }
